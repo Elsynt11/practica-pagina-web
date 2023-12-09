@@ -1,0 +1,154 @@
+body {
+    background-color: #0F0F0F;
+    color: #FFFFFF;;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+    
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+main {
+    padding: auto;
+    margin: auto;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+.imagen img{
+    max-width: 80%; /* Ajusta el tamaño de la imagen para que no se desborde */
+    max-height: 80%;
+    display: block; /* Asegura que las imágenes se muestren como bloques */
+    margin: 0 auto; /* Centra horizontalmente las imágenes en dispositivos móviles */
+}
+
+#navbar {
+    background-color: #000000;
+}
+
+
+#navegacion{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.nav-link{
+    float: left;
+}
+
+.nav-link a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-link a:hover
+{
+    background-color: #111;
+}
+
+
+#nombre-de-la-banda img {
+    max-width: 300px; /* Ajusta el tamaño según tus necesidades */
+    margin-right: 0px; /* Ajusta el espacio entre la imagen y el texto */
+}
+
+
+.contenedor{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.miembro {
+    flex: 1;
+    text-align: center;
+    margin: 30px;
+}
+
+
+.dany img{
+    border: 5px solid rgb(126, 2, 2);
+}
+
+.pau img{
+    border: 5px solid rgb(139, 137, 4);
+}
+
+.ale img{
+    border: 5px solid rgb(3, 116, 5);
+}
+
+.imagen-con-hover {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hover-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    transition: opacity 0.5s ease-in-out; /* Agregamos una transición para suavizar la opacidad */
+    opacity: 0; /* Inicialmente, la imagen hover estará oculta */
+}
+
+.miembro:hover .imagen-con-hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+.miembro:hover .hover-imagen {
+    display: block;
+    opacity: 1; /* Muestra la imagen hover suavemente */
+}
+
+.miembro img, .hover-imagen img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.responsive img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+/*Adaptarse e movil*/
+@media (max-width: 768px) {
+    .imagen img {
+        max-width: 100%; /* Haz que las imágenes ocupen todo el ancho del contenedor */
+    }
+
+    .contenedor {
+        display: block; /* Cambia a una sola columna en dispositivos móviles */
+    }
+
+    .miembro {
+        margin: 20px 0; /* Espacio entre las integrantes en dispositivos móviles */
+        text-align: center;
+    }
+
+    .miembro img {
+        display: block; /* Asegura que las imágenes se muestren como bloques */
+        margin: 0 auto; /* Centra las imágenes en dispositivos móviles */
+    }
+}
